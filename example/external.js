@@ -2,7 +2,7 @@ var rust = require('rustify')
 
 var wasm = rust('./add.rs')
 
-WebAssembly.instantiate(wasm, {})
+WebAssembly.instantiate(wasm, {}) // eslint-disable-line
   .then(function (res) {
     var addOne = res.instance.exports.add_one
     console.log(addOne(41))

@@ -6,8 +6,7 @@ var wasm = rust`
     x + 1
   }
 `
-
-WebAssembly.instantiate(wasm, {})
+WebAssembly.instantiate(wasm, {}) // eslint-disable-line
   .then(function (res) {
     var addOne = res.instance.exports.add_one
     console.log(addOne(41))
