@@ -3,11 +3,11 @@
 set -e # exit on failure
 
 target="$1"
-name="$(echo "$1" | sed 's/\/.wasm//')"
+name="$(basename "$1" | sed 's/\.rs//')"
 
 mkdir -p dist
 rustc +nightly \
   --target wasm32-unknown-unknown "$target" \
   --crate-type=cdylib \
   --out-dir dist/
-wasm-gc "${name}.wasm" "${name}.min.wasm"
+wasm-gc "./dist/${name}.wasm" "./dist/${name}.min.wasm"
