@@ -2,7 +2,7 @@
   "name": "rustify",
   "description": "Rust WebAssembly transform for Browserify",
   "repository": "browserify/rustify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "bankai start example/inline",
     "start:external": "bankai start example/external",
