@@ -1,0 +1,24 @@
+{
+  "name": "rustify",
+  "description": "Rust WebAssembly transform for Browserify",
+  "repository": "yoshuawuyts/rustify",
+  "version": "0.0.0",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "start": "node .",
+    "test": "standard && npm run deps"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "dependency-check": "^2.9.1",
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
+  },
+  "keywords": [
+    "browserify",
+    "rust",
+    "node",
+    "inline"
+  ],
+  "license": "Apache-2.0"
+}
