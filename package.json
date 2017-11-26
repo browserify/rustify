@@ -4,12 +4,13 @@
   "repository": "yoshuawuyts/rustify",
   "version": "0.0.0",
   "scripts": {
-    "start": "browserify -t ./ example/inline.js -o dist/bundle.js",
+    "start": "mkdir -p dist/ && browserify -t ./ example/inline.js -o dist/bundle.js",
     "test": "standard"
   },
   "dependencies": {
     "falafel": "^2.1.0",
     "map-limit": "0.0.1",
+    "mkdirp": "^0.5.1",
     "through2": "^2.0.3"
   },
   "devDependencies": {

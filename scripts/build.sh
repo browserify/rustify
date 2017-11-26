@@ -7,6 +7,7 @@ name="$(basename "$1" | sed 's/\.rs//')"
 
 mkdir -p dist
 rustc +nightly \
+  -O \
   --target wasm32-unknown-unknown "$target" \
   --crate-type=cdylib \
   --out-dir dist/
