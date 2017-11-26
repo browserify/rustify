@@ -4,13 +4,15 @@
   "repository": "yoshuawuyts/rustify",
   "version": "0.0.0",
   "scripts": {
-    "deps": "dependency-check . && dependency-check . --extra --no-dev",
-    "start": "node .",
-    "test": "standard && npm run deps"
+    "start": "browserify -t ./ example/inline.js -o dist/bundle.js",
+    "test": "standard"
   },
-  "dependencies": {},
+  "dependencies": {
+    "falafel": "^2.1.0",
+    "through2": "^2.0.3"
+  },
   "devDependencies": {
-    "dependency-check": "^2.9.1",
+    "browserify": "^14.5.0",
     "standard": "^10.0.3",
     "tape": "^4.8.0"
   },
