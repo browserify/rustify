@@ -2,10 +2,22 @@
 [![npm version][2]][3] [![build status][4]][5]
 [![downloads][8]][9] [![js-standard-style][10]][11]
 
-Rust WebAssembly transform for Browserify
+Rust WebAssembly transform for
+[Browserify](https://github.com/browserify/browserify). Because this is an
+unstable rust feature, at the time of writing it relies on
+[wasm-gc](https://github.com/alexcrichton/wasm-gc) to be available from the
+command line. See [Installation](#installation) for instructions on how to
+install. Probably also doesn't work on Windows.
+
+Because this feature is experimental in Rust, this module should be considered
+similarly.
 
 ## Usage
+```sh
+$ browserify -t rustify index.js > bundle.js
+```
 ```js
+// index.js
 var rust = require('rustify')
 
 var wasm = rust`
@@ -50,6 +62,7 @@ console.log(addOne(68))
 ```
 
 ## Installation
+With [rustup](https://www.rust-lang.org/install.html) installed:
 ```sh
 $ rustup update nightly
 $ rustup target add wasm32-unknown-unknown --toolchain nightly
