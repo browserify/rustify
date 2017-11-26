@@ -37,7 +37,7 @@ WebAssembly.instantiate(wasm, {})
   })
 ```
 
-## External (to be implemented)
+## External
 ```js
 var rust = require('rustify')
 
@@ -52,6 +52,15 @@ WebAssembly.instantiate(wasm, {})
     console.error('Creating WASM module failed', e)
   })
 ```
+
+## API
+### `uint8Array = rust(filename)`
+Create a valid `.rs` file to a `Uint8Array`, ready to be passed to the WASM
+constructor.
+
+### `uint8Array = rust#string`
+Create an inline rust template string to a `Uint8Array`, ready to be passed to
+the WASM constructor.
 
 ## Installation
 With [rustup](https://www.rust-lang.org/install.html) installed:
