@@ -81,10 +81,10 @@ $ npm install rustify
 [1]: https://nodejs.org/api/documentation.html#documentation_stability_index
 [2]: https://img.shields.io/npm/v/rustify.svg?style=flat-square
 [3]: https://npmjs.org/package/rustify
-[4]: https://img.shields.io/travis/yoshuawuyts/rustify/master.svg?style=flat-square
-[5]: https://travis-ci.org/yoshuawuyts/rustify
-[6]: https://img.shields.io/codecov/c/github/yoshuawuyts/rustify/master.svg?style=flat-square
-[7]: https://codecov.io/github/yoshuawuyts/rustify
+[4]: https://img.shields.io/travis/browserify/rustify/master.svg?style=flat-square
+[5]: https://travis-ci.org/browserify/rustify
+[6]: https://img.shields.io/codecov/c/github/browserify/rustify/master.svg?style=flat-square
+[7]: https://codecov.io/github/browserify/rustify
 [8]: http://img.shields.io/npm/dm/rustify.svg?style=flat-square
 [9]: https://npmjs.org/package/rustify
 [10]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
