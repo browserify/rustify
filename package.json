@@ -4,8 +4,16 @@
   "repository": "yoshuawuyts/rustify",
   "version": "0.0.0",
   "scripts": {
-    "start": "mkdir -p dist/ && browserify -t ./ example/inline.js -o dist/bundle.js",
+    "start": "bankai start example/inline",
+    "start:external": "bankai start example/external",
+    "build": "mkdir -p dist/ && browserify -t ./ example/inline.js -o dist/bundle.js",
+    "build:external": "mkdir -p dist/ && browserify -t ./ example/external.js -o dist/bundle.js",
     "test": "standard"
+  },
+  "browserify": {
+    "transform": [
+      "./"
+    ]
   },
   "dependencies": {
     "falafel": "^2.1.0",
@@ -14,6 +22,7 @@
     "through2": "^2.0.3"
   },
   "devDependencies": {
+    "bankai": "^9.0.1",
     "browserify": "^14.5.0",
     "standard": "^10.0.3",
     "tape": "^4.8.0"
