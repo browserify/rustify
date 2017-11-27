@@ -67,7 +67,6 @@ With [rustup](https://www.rust-lang.org/install.html) installed:
 ```sh
 $ rustup update nightly
 $ rustup target add wasm32-unknown-unknown --toolchain nightly
-$ rustc +nightly --target wasm32-unknown-unknown "$target" --crate-type=cdylib
 $ cargo install --git https://github.com/alexcrichton/wasm-gc
 ```
 ```sh
