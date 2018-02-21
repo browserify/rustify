@@ -6,9 +6,7 @@ language: node_js
 before_script:
   - 'curl https://sh.rustup.rs -sSf | sh -s -- -y -v'
   - 'export PATH="$HOME/.cargo/bin:$PATH"'
-  - 'rustup update nightly'
-  - 'rustup target add wasm32-unknown-unknown --toolchain nightly'
-  - 'cargo install --git https://github.com/alexcrichton/wasm-gc'
+  - 'sh scripts/install.sh'
 script:
   - 'npm test'
 # after_success: "npm i -g codecov && npm run coverage && codecov"
