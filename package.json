@@ -11,6 +11,7 @@
     "test": "standard && node test/index.js"
   },
   "dependencies": {
+    "acorn-node": "^1.3.0",
     "falafel": "^2.1.0",
     "map-limit": "0.0.1",
     "mkdirp": "^0.5.1",
