@@ -4,7 +4,7 @@ node_js:
 sudo: false
 language: node_js
 before_script:
-  - 'curl https://sh.rustup.rs -sSf | sh -s -- -y'
+  - 'curl https://sh.rustup.rs -sSf | sh -s -- -y -v'
   - 'export PATH="$HOME/.cargo:$PATH"'
   - 'rustup update nightly'
   - 'rustup target add wasm32-unknown-unknown --toolchain nightly'
