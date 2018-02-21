@@ -1,9 +1,12 @@
 node_js:
-- "4"
-- "5"
-- "6"
-- "7"
+  - stable
+  - 8
 sudo: false
 language: node_js
-script: "npm run test"
+before_script:
+  - 'curl https://sh.rustup.rs -sSf | sh -s -- -y -v'
+  - 'export PATH="$HOME/.cargo/bin:$PATH"'
+  - 'sh scripts/install.sh'
+script:
+  - 'npm test'
 # after_success: "npm i -g codecov && npm run coverage && codecov"

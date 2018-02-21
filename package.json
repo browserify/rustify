@@ -8,12 +8,7 @@
     "start:external": "bankai start example/external",
     "build": "mkdir -p dist/ && browserify -t ./ example/inline.js -o dist/bundle.js",
     "build:external": "mkdir -p dist/ && browserify -t ./ example/external.js -o dist/bundle.js",
-    "test": "standard"
-  },
-  "browserify": {
-    "transform": [
-      "./"
-    ]
+    "test": "standard && node test/index.js"
   },
   "dependencies": {
     "falafel": "^2.1.0",
@@ -26,6 +21,11 @@
     "browserify": "^14.5.0",
     "standard": "^10.0.3",
     "tape": "^4.8.0"
+  },
+  "standard": {
+    "ignore": [
+      "test/*/**.js"
+    ]
   },
   "keywords": [
     "browserify",
