@@ -5,6 +5,7 @@ sudo: false
 language: node_js
 before_script:
   - 'curl https://sh.rustup.rs -sSf | sh -s -- -y'
+  - 'export PATH="$HOME/.cargo:$PATH"'
   - 'rustup update nightly'
   - 'rustup target add wasm32-unknown-unknown --toolchain nightly'
   - 'cargo install --git https://github.com/alexcrichton/wasm-gc'
